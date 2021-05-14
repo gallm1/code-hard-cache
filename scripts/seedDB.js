@@ -452,6 +452,222 @@ const termsSeed = [
         tips: 'https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it',
         user: 'gallm1'
     },
+    { 
+        term: 'AI',
+        represents: 'Artificial Intelligence',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Artificial_intelligence',
+        user: 'gallm1'
+    },
+    { 
+        term: 'ASCII',
+        represents: 'American Standard Code for Information Interchange',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://www.gartner.com/en/information-technology/glossary/ascii-american-standard-code-for-information-interchange#:~:text=The%20American%20Standard%20Code%20for,computer%20and%20word%20processor%20systems.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'BASIC',
+        represents: 'Beginners All-purpose Symbolic Instruction Code',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/BASIC',
+        user: 'gallm1'
+    },
+    { 
+        term: 'CL',
+        represents: 'Command Language',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Command_language',
+        user: 'gallm1'
+    },
+    { 
+        term: 'CLI',
+        represents: 'Command Line Interface',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://www.techopedia.com/definition/3337/command-line-interface-cli#:~:text=Command%20line%20interface%20(CLI)%20is,reply%20in%20the%20same%20way.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'CPU',
+        represents: 'Central Processing Unit',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://courses.lumenlearning.com/zeliite115/chapter/reading-the-central-processing-unit/#:~:text=A%20central%20processing%20unit%20(CPU,operations%20specified%20by%20the%20instructions.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'DNA',
+        represents: 'Digital Network Architecture',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://cdn2.hubspot.net/hubfs/2215854/DNA%20Overview.pdf',
+        user: 'gallm1'
+    },
+    { 
+        term: 'FTP',
+        represents: 'File Transfer Protocol',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/File_Transfer_Protocol',
+        user: 'gallm1'
+    },
+    { 
+        term: 'GUI',
+        represents: 'Graphical User Interface',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Graphical_user_interface#:~:text=The%20graphical%20user%20interface%20(GUI,command%20labels%20or%20text%20navigation.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'HTML',
+        represents: 'HyperText Markup Language',
+        meaning: "The markup tells web browsers how to display a web page's words and images.",
+        date: new Date(Date.now()),
+        tips: 'https://www.w3schools.com/html/',
+        user: 'gallm1'
+    },
+    { 
+        term: 'HTTP',
+        represents: 'HyperText Transport Protocol',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol',
+        user: 'gallm1'
+    },
+    { 
+        term: 'IP',
+        represents: 'Internet Protocol',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Internet_Protocol',
+        user: 'gallm1'
+    },
+    { 
+        term: 'ISP',
+        represents: 'Internet Service Provider',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Internet_service_provider',
+        user: 'gallm1'
+    },
+    { 
+        term: 'JPEG',
+        represents: 'Joint Photographic Experts Group',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Joint_Photographic_Experts_Group',
+        user: 'gallm1'
+    },
+    { 
+        term: 'MS-DOS',
+        represents: 'MicroSoft Disk Operating System',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/MS-DOS',
+        user: 'gallm1'
+    },
+    { 
+        term: 'OS',
+        represents: 'Operating System',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Operating_system',
+        user: 'gallm1'
+    },
+    { 
+        term: 'OSS',
+        represents: 'Open Source Software',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Open-source_software',
+        user: 'gallm1'
+    },
+    { 
+        term: 'PDF',
+        represents: 'Portable Document Format',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/PDF#:~:text=Portable%20Document%20Format%20(PDF)%2C,%2C%20hardware%2C%20and%20operating%20systems.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'PIP',
+        represents: 'Peripheral Interchange Program',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Peripheral_Interchange_Program',
+        user: 'gallm1'
+    },
+    { 
+        term: 'RAM',
+        represents: 'Random Access Memory',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Random-access_memory',
+        user: 'gallm1'
+    },
+    { 
+        term: 'URL',
+        represents: 'Uniform Resource Locator',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/URL',
+        user: 'gallm1'
+    },
+    { 
+        term: 'UTF',
+        represents: 'Unicode Transformation Format',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://unicode.org/faq/utf_bom.html#:~:text=A%3A%20A%20Unicode%20transformation%20format,synonyms%20for%20the%20same%20concept.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'VAN',
+        represents: 'Value Added Network',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://www.investopedia.com/terms/v/value-added-network.asp#:~:text=A%20value%2Dadded%20network%20(VAN)%20is%20a%20private%2C,interchange%20(EDI)%20between%20companies.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'WAN',
+        represents: 'Wide Area Network',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Wide_area_network#:~:text=A%20wide%20area%20network%20(WAN)%20is%20a%20telecommunications%20network%20that,established%20with%20leased%20telecommunication%20circuits.',
+        user: 'gallm1'
+    },
+    { 
+        term: 'WWW',
+        represents: 'World Wide Web',
+        meaning: 'See $Tips$',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/World_Wide_Web',
+        user: 'gallm1'
+    },
+    { 
+        term: 'SAP',
+        represents: 'Systems Applications & Products',
+        meaning: 'A German software product used by enterprises for many functions',
+        date: new Date(Date.now()),
+        tips: 'https://stefanini.com/en/trends/news/how-businesses-can-benefit-from-sap-software',
+        user: 'gallm1'
+    },
+    { 
+        term: 'MVP',
+        represents: 'Minimum Viable Product',
+        meaning: 'A version of a product with just enough features to be usable by early customers who can then provide feedback for future product development.',
+        date: new Date(Date.now()),
+        tips: 'https://en.wikipedia.org/wiki/Minimum_viable_product',
+        user: 'gallm1'
+    }
         
 ];
 
