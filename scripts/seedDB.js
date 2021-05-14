@@ -279,7 +279,7 @@ const termsSeed = [
     { 
         term: 'LOC',
         represents: 'Lines of Code',
-        meaning: 'The number of lines of code in a program. A way to measure the size of a program',
+        meaning: 'The number of lines of code in a program. A way to measure the size of a program.',
         date: new Date(Date.now()),
         tips: 'https://en.wikipedia.org/wiki/Source_lines_of_code',
         user: 'gallm1'
