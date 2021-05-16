@@ -19,7 +19,7 @@ app.get("*", function(req, res) {
 });
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/codehardcache"
+  process.env.MONGODB_URI || "mongodb://localhost/codehardcache", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
 );
 
 app.listen(PORT, function() {
