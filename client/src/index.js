@@ -6,13 +6,13 @@ import registerServiceWorker from "./registerServiceWorker";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
-    <Auth0Provider
-        domain="dev-re-7n09f.us.auth0.com"
-        clientId="BEzFtfWhqCKmukdaAI0WfwM6CWrybfpZ"
-        redirectUri={window.location.origin}
-    >
-        <App />
-    </Auth0Provider>,
+    // <Auth0Provider
+    //     domain="dev-re-7n09f.us.auth0.com"
+    //     clientId="Vug1gmWtCe4XaSaQhQn72TfJthKd52Jq"
+    //     redirectUri={window.location.origin}
+    // >
+        <App />,
+    // </Auth0Provider>,
     document.getElementById("root")
 );
 registerServiceWorker();
