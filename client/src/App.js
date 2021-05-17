@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
+import CreateTerm from "./pages/CreateTerm"
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
 
@@ -26,6 +27,10 @@ class App extends Component {
 			<ThemeProvider theme={theme}>
 				<Router>
 					<Nav />
+					<Switch>
+						<Route exact path="/create-term" component={CreateTerm} />		
+					</Switch>
+					
 				</Router>
 
 				{/* // <div className="App">
