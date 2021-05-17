@@ -1,9 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import SignIn from "./pages/Login";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 import { deepPurple, green } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
@@ -20,26 +21,15 @@ const theme = createMuiTheme({
 	},
 });
 
-class App extends Component {
-	render() {
-		return (
-			<ThemeProvider theme={theme}>
-				<Router>
-					<Nav />
-				</Router>
-
-				{/* // <div className="App">
-        //   <div className="App-header">
-        //     <img src={logo} className="App-logo" alt="logo" />
-        //     <h2>Welcome to React</h2>
-        //   </div>
-        //   <p className="App-intro">
-        //     To get started, edit <code>src/App.js</code> and save to reload.
-        //   </p>
-        // </div> */}
-			</ThemeProvider>
-		);
-	}
+function App() {
+	return (
+		<ThemeProvider theme={theme}>
+			<Router>
+				<Nav />
+				<SignIn />
+			</Router>
+		</ThemeProvider>
+	);
 }
 
 export default App;
