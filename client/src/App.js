@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import SignIn from "./pages/Login";
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
+import CreateTerm from "./pages/CreateTerm";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
 
 const theme = createMuiTheme({
@@ -21,15 +22,19 @@ const theme = createMuiTheme({
 	},
 });
 
-function App() {
-	return (
-		<ThemeProvider theme={theme}>
-			<Router>
-				<Nav />
-				<SignIn />
-			</Router>
-		</ThemeProvider>
-	);
+class App extends Component {
+	render() {
+		return (
+			<ThemeProvider theme={theme}>
+				<Router>
+					<Nav />
+					<Switch>
+						<Route exact path="/create-term" component={CreateTerm} />
+					</Switch>
+				</Router>
+			</ThemeProvider>
+		);
+	}
 }
 
 export default App;
