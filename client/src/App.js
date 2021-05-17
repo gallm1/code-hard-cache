@@ -1,9 +1,10 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
-import CreateTerm from "./pages/CreateTerm"
+import SignIn from "./pages/Login";
+import CreateTerm from "./pages/CreateTerm";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
 
@@ -28,20 +29,9 @@ class App extends Component {
 				<Router>
 					<Nav />
 					<Switch>
-						<Route exact path="/create-term" component={CreateTerm} />		
+						<Route exact path="/create-term" component={CreateTerm} />
 					</Switch>
-					
 				</Router>
-
-				{/* // <div className="App">
-        //   <div className="App-header">
-        //     <img src={logo} className="App-logo" alt="logo" />
-        //     <h2>Welcome to React</h2>
-        //   </div>
-        //   <p className="App-intro">
-        //     To get started, edit <code>src/App.js</code> and save to reload.
-        //   </p>
-        // </div> */}
 			</ThemeProvider>
 		);
 	}
