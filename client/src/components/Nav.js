@@ -5,12 +5,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
-// import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { ListItemSecondaryAction } from '@material-ui/core';
@@ -27,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',  
     },
-    marginLeft: 375,
+    marginLeft: theme.spacing(50),
     
   },
   search: {
@@ -117,8 +115,9 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My Account</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Home</MenuItem>
+      <MenuItem onClick={handleMenuClose}>User Log-In</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Add Term to Library</MenuItem>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
 
     </Menu>
@@ -142,9 +141,9 @@ export default function PrimarySearchAppBar() {
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          <MenuIcon />
         </IconButton>
-        <p>Profile</p>
+        <p>Menu</p>
       </MenuItem>
     </Menu>
   );
@@ -153,14 +152,14 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography className={classes.title} variant="h4" color="secondary" noWrap>
             <AttachMoneyIcon />  
             CODE|HARD|CACHE
@@ -189,7 +188,7 @@ export default function PrimarySearchAppBar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <MenuIcon />
             </IconButton>
           </div>
           <div className={classes.sectionMobile}>

@@ -1,14 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '75%',
+        width: '65%',
         marginTop: theme.spacing(10),
     },
     paper: {
@@ -39,40 +37,43 @@ export default function OutlinedCard() {
     <div className={classes.paper}>
     <Card className={classes.root} variant="outlined">
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom>
-          Code | Hard | Cache Term
+        <Typography className={classes.title} color="secondary" gutterBottom>
+          Code | Hard | Cache - Search Result
         </Typography>
-        <Typography variant="h5" component="h2">
-          Term/Acronym:  (from db)
+        <Typography variant="h6" component="h2" color="primary">
+          Term:  
         </Typography>
-        {/* <Typography className={classes.pos} color="textSecondary">
-          Represents (from db)
-        </Typography> */}
-        <Typography variant="body2" component="p">
-          Represents: (from db)
-          <br />
-          {"(from db)"}
+        <Typography variant="h4" component="h2" color="primary">
+          {"ex: CSS; (term from db)"}
         </Typography>
-        <Typography variant="body2" component="p">
-          Meaning/Definition : 
-          <br />
-          {'"(from db)"'}
+        <Typography variant="h6" component="h2" color="primary">
+          Represents:  
         </Typography>
-        <Typography variant="body2" component="p">
-          Tips/Links: 
-          <br />
-          {'"(from db)"'}
+        <Typography className={classes.pos} color="primary">
+          {"represents from db"}
         </Typography>
-        <Typography variant="body2" component="p">
-          User : (from db)
+        <Typography variant="h6" component="h2" color="primary">
+          Meaning:  
         </Typography>
-        <Typography variant="body2" component="p">
-          Date : (from db)
+        <Typography className={classes.pos} color="primary">
+          {"meaning from db"}
+        </Typography>
+        <Typography variant="h6" component="h2" color="primary">
+          Tips/Links:  
+        </Typography>
+        <Typography className={classes.pos} color="primary">
+          {"tips from db"}
+        </Typography>
+        <Typography variant="body2" component="p" color="primary">
+          User : (user from db)
+        </Typography>
+        <Typography variant="body2" component="p" color="primary">
+          Date : (date from db)
         </Typography>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button size="small">Tips/HyperLinks</Button>
-      </CardActions>
+      </CardActions> */}
     </Card>
     </div>
   );
