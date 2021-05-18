@@ -151,7 +151,7 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton
             edge="start"
@@ -163,7 +163,7 @@ export default function PrimarySearchAppBar() {
           </IconButton>
           <Typography className={classes.title} variant="h4" color="secondary" noWrap>
             <AttachMoneyIcon />  
-            Code | Hard | Cache
+            CODE|HARD|CACHE
             <AttachMoneyIcon />
           </Typography>
           <div className={classes.search}>
