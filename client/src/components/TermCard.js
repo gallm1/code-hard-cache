@@ -9,10 +9,10 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '75%',
-        margin: theme.spacing(1),
+        marginTop: theme.spacing(10),
     },
     paper: {
-        marginTop: theme.spacing(1),
+        // marginTop: theme.spacing(),
         // marginLeft: theme.spacing(1),
         display: 'flex',
         flexDirection: 'column',
