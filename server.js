@@ -8,6 +8,8 @@ const mongoose = require("mongoose");
 const MongoStore = require("connect-mongodb-session")(session);
 const routes = require("./routes");
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/codehardcache", { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
