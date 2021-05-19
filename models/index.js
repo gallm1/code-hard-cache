@@ -1,4 +1,4 @@
 module.exports = {
-    Terms:require("./Terms"),
+    Terms: require("./Terms"),
     User: require("./User")
 };

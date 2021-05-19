@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import LoginButton from "./components/LoginButton";
 import SignIn from "./pages/Login";
 import CreateTerm from "./pages/CreateTerm";
 import Terms from "./pages/Terms";
@@ -23,8 +24,9 @@ const theme = createMuiTheme({
 	},
 });
 
-class App extends Component {
-	render() {
+function App() {
+
+
 		return (
 			<ThemeProvider theme={theme}>
 				<Router>
@@ -35,11 +37,11 @@ class App extends Component {
 						<Route exact path="/create-term" component={CreateTerm} />
 						<Route exact path="/search-results" component={Terms} />
 					</Switch>
+				<LoginButton />
 					<Footer />
 				</Router>
 			</ThemeProvider>
 		);
-	}
 }
 
 export default App;
