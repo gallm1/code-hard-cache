@@ -7,6 +7,7 @@ import LoginButton from "./components/LoginButton";
 import SignIn from "./pages/Login";
 import CreateTerm from "./pages/CreateTerm";
 import Terms from "./pages/Terms";
+import Home from "./pages/Home";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
 
@@ -32,7 +33,7 @@ function App() {
 				<Router>
 					<Nav />
 					<Switch>
-						<Route exact path="/" component={SignIn} />
+						<Route exact path="/" component={Home} />
 						<Route exact path="/sign-in" component={SignIn} />
 						<Route exact path="/create-term" component={CreateTerm} />
 						<Route exact path="/search-results" component={Terms} />

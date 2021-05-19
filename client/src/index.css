@@ -16,3 +16,8 @@ body {
   text-align: center;
   border-top: 3px solid #00e676;
 }
+
+.card-title {
+  background-color: #673ab7;
+  padding-left: 5px;
+}
