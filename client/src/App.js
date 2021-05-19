@@ -3,8 +3,6 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import LoginButton from "./components/LoginButton";
-import SignIn from "./pages/Login";
 import CreateTerm from "./pages/CreateTerm";
 import Terms from "./pages/Terms";
 import Home from "./pages/Home";
@@ -34,11 +32,10 @@ function App() {
 					<Nav />
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route exact path="/sign-in" component={SignIn} />
+						<Route exact path="/sign-in" />
 						<Route exact path="/create-term" component={CreateTerm} />
 						<Route exact path="/search-results" component={Terms} />
 					</Switch>
-				<LoginButton />
 					<Footer />
 				</Router>
 			</ThemeProvider>
