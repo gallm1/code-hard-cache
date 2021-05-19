@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import { withAuthenticationRequired } from "@auth0/auth0-react";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BasicTextFields() {
+const BasicTextFields = () => {
   const classes = useStyles();
 
   return (
@@ -40,4 +41,9 @@ export default function BasicTextFields() {
     
     </div>
   );
-}
+};
+
+export default withAuthenticationRequired(BasicTextFields, {
+	// Show a message while the user waits to be redirected to the login page.
+	onRedirecting: () => <div>Redirecting you to the login page...</div>,
+});
