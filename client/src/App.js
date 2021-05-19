@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CreateTerm from "./pages/CreateTerm";
 import Terms from "./pages/Terms";
+import Home from "./pages/Home";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
 
@@ -30,7 +31,7 @@ function App() {
 				<Router>
 					<Nav />
 					<Switch>
-						<Route exact path="/" />
+						<Route exact path="/" component={Home} />
 						<Route exact path="/sign-in" />
 						<Route exact path="/create-term" component={CreateTerm} />
 						<Route exact path="/search-results" component={Terms} />

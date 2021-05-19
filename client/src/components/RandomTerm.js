@@ -5,6 +5,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import "../index.css";
 
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '65%',
@@ -45,7 +47,7 @@ export default function OutlinedCard() {
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography className={classes.title} color="primary" gutterBottom>
-          Code | Hard | Cache --- Search Result
+          Code | Hard | Cache --- Random Term of the Moment
         </Typography>
         <Typography className="card-title" variant="h6" component="h2" color="secondary">
           Term:  
