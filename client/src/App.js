@@ -8,6 +8,7 @@ import Terms from "./pages/Terms";
 import Home from "./pages/Home";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
+import { StoreProvider } from "./utils/GlobalState";
 
 const theme = createMuiTheme({
 	palette: {
@@ -29,14 +30,16 @@ function App() {
 		return (
 			<ThemeProvider theme={theme}>
 				<Router>
+					<StoreProvider>
 					<Nav />
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/sign-in" />
 						<Route exact path="/create-term" component={CreateTerm} />
-						<Route exact path="/search-results" component={Terms} />
+						<Route exact path="/" component={Terms} />
 					</Switch>
 					<Footer />
+					</StoreProvider>
 				</Router>
 			</ThemeProvider>
 		);

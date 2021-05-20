@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -15,6 +15,8 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import { ListItemSecondaryAction } from "@material-ui/core";
 import BasicTextFields from "../pages/CreateTerm";
 import { Link } from "react-router-dom";
+import { useStoreContext } from "../utils/GlobalState";
+import { UPDATE_SEARCH } from "../utils/actions";
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -82,6 +84,19 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PrimarySearchAppBar() {
+	const inputRef = useRef();
+	const [state, dispatch] = useStoreContext();
+
+	function handleSubmit(e) {
+		e.preventDefault();
+
+		dispatch({
+			type: UPDATE_SEARCH,
+			search: inputRef.current.value,
+		});
+		inputRef.current.value = "";
+	}
+
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -158,14 +173,6 @@ export default function PrimarySearchAppBar() {
 		<div className={classes.grow}>
 			<AppBar position="fixed">
 				<Toolbar>
-					{/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton> */}
 					<Typography
 						className={classes.title}
 						variant="h4"
@@ -187,6 +194,9 @@ export default function PrimarySearchAppBar() {
 								input: classes.inputInput,
 							}}
 							inputProps={{ "aria-label": "search" }}
+							onChange={handleSubmit}
+							inputRef={inputRef}
+							value={state.search}
 						/>
 					</div>
 					<div className={classes.grow} />

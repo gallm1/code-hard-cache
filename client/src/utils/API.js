@@ -7,10 +7,7 @@ export default {
 	saveTerm: (termData) => {
 		return axios.get("/api/terms", termData);
 	},
-	getTerm: (id) => {
-		return axios.get("/api/terms/" + id);
-	},
-	deleteTerm: (id) => {
-		return axios.delete("/api/terms/" + id);
-	},
+	getTerm: (query) => {
+		return axios.get("/api/terms/", { params: { q: query }});
+	}
 };
