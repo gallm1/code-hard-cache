@@ -36,6 +36,8 @@ const BasicTextFields = () => {
    
       <TextField id="outlined-basic" label="Tips/Hyperlinks" placeholder="ex: Insert links to tips or videos here" variant="outlined" />
 
+      <TextField id="outlined-basic" label="User Name" placeholder="Enter your user name handle here" variant="outlined" />
+
       <Button variant="contained" color="primary">Submit New Term</Button>
     </form>
     
