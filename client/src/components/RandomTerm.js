@@ -92,7 +92,7 @@ export default function OutlinedCard() {
 						Tips/Links:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						https://code-hard-cache.herokuapp.com/
+						<a href="https://code-hard-cache.herokuapp.com/" target="_blank">https://code-hard-cache.herokuapp.com</a>
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
 						User : SF MG

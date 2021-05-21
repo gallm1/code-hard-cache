@@ -93,7 +93,7 @@ export default function OutlinedCard(props) {
 						Tips/Links: 
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{tips}
+						<a href={tips} target="_blank">{tips}</a>
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
 						User : {user}
