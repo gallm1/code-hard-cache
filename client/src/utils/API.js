@@ -5,9 +5,9 @@ export default {
 		return axios.get("/api/terms");
 	},
 	saveTerm: (termData) => {
-		return axios.get("/api/terms", termData);
+		return axios.post("/api/terms", termData);
 	},
 	getTerm: (query) => {
-		return axios.get("/api/terms/", { params: { q: query }});
-	}
+		return axios.get("/api/terms/", { params: { q: query } });
+	},
 };

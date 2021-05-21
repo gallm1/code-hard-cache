@@ -52,7 +52,7 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="secondary"
 					>
-						Term: {term}
+						Term:
 					</Typography>
 					<Typography
 						className={classes.mainTerm}
@@ -60,7 +60,7 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="primary"
 					>
-						{"ex: CSS; (term from db)"}
+						{term}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -68,10 +68,10 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="secondary"
 					>
-						Represents: {represents}
+						Represents:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{"represents from db"}
+						{represents}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -79,10 +79,10 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="secondary"
 					>
-						Meaning: {meaning}
+						Meaning:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{"meaning from db"}
+						{meaning}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -90,16 +90,18 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="secondary"
 					>
-						Tips/Links: {tips}
+						Tips/Links:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{"tips from db"}
+						<a href={tips} target="_blank">
+							{tips}
+						</a>
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
-						User : (user from db) {user}
+						User : {user}
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
-						Date : (date from db) {date}
+						Date : {date}
 					</Typography>
 				</CardContent>
 				{/* <CardActions>
