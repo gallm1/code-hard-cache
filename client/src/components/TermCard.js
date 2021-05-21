@@ -4,6 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import "../index.css";
+import Highlight from "react-highlight.js";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -60,7 +61,7 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="primary"
 					>
-						{term}
+						<Highlight>{term}</Highlight>
 					</Typography>
 					<Typography
 						className="card-title"
