@@ -1,29 +1,59 @@
-# Create React Express App
+# Project #3: CODE|HARD|CACHE
 
-## About This Boilerplate
+## Description
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+CODE|HARD|CACHE is a crowdsourced application where a coder can go to search a repository of acronyms/terms to find out what they stand for, the meaning and even find links to tips or more information on the subject.  It also allows registered users to add records to the repository.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+[Deployed Application](https://code-hard-cache.herokuapp.com/)
 
-## Starting the app locally
+[GitHub Repo](https://github.com/gallm1/code-hard-cache)
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+## Installation
 
-```
-npm install
-```
+npm i (dependencies already listed on package.json file)
+npm run start to run server locally
+Otherwise, go to the deployed application link above
 
-This should install node modules within the server and the client folder.
+## Usage
 
-After both installations complete, run the following command in your terminal:
+Start Page with Random Generated Acronym/Term
 
-```
-npm start
-```
+![image](https://github.com/gallm1/code-hard-cache/blob/main/images/home_random.png)
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+Search Acronym/Term in Search Bar - See results
 
-## Deployment (Heroku)
+![image](https://github.com/gallm1/code-hard-cache/blob/main/images/search_results.png)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+Menu - On Right Side to Log-In
+
+![image](https://github.com/gallm1/code-hard-cache/blob/main/images/menu.png)
+
+Log-In through auth0
+
+![image](https://github.com/gallm1/code-hard-cache/blob/main/images/sign_in.png)
+
+Add Acronym/Term to Library - Must Be Logged In
+
+![image](https://github.com/gallm1/code-hard-cache/blob/main/images/create_term.png)
+## Credits
+
+None
+
+## License
+
+None
+
+## Badges
+
+None
+
+## Features
+
+None
+
+## How to Contribute
+
+None
+## Tests
+
+None
