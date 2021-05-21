@@ -17,6 +17,7 @@ import BasicTextFields from "../pages/CreateTerm";
 import { Link } from "react-router-dom";
 import { useStoreContext } from "../utils/GlobalState";
 import { UPDATE_SEARCH } from "../utils/actions";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -83,19 +84,29 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar(props) {
 	const inputRef = useRef();
 	const [state, dispatch] = useStoreContext();
+	console.log(props);
+	// const [search, setSearch] = useState();
 
-	function handleSubmit(e) {
-		e.preventDefault();
+	// function handleChange(req) {
+	// 	setSearch(req);
+	// 	console.log(search);
+	// }
 
-		dispatch({
-			type: UPDATE_SEARCH,
-			search: inputRef.current.value,
-		});
-		inputRef.current.value = "";
-	}
+	// function handleSubmit(e) {
+	// 	e.persist();
+	// 	e.preventDefault();
+	// 	state.search = e.target.value;
+	// 	console.log(state.search);
+
+	// 	dispatch({
+	// 		type: UPDATE_SEARCH,
+	// 		search: e.target.value,
+	// 	});
+	// 	// state.search = "";
+	// }
 
 	const classes = useStyles();
 	const [anchorEl, setAnchorEl] = React.useState(null);
@@ -135,7 +146,9 @@ export default function PrimarySearchAppBar() {
 			open={isMenuOpen}
 			onClose={handleMenuClose}
 		>
-			<MenuItem component={Link} to="/">Home</MenuItem>
+			<MenuItem component={Link} to="/">
+				Home
+			</MenuItem>
 			<MenuItem onClick={loginWithRedirect}>User Log-In</MenuItem>
 			<MenuItem component={Link} to="/create-term">
 				Add Term to Library
@@ -194,9 +207,9 @@ export default function PrimarySearchAppBar() {
 								input: classes.inputInput,
 							}}
 							inputProps={{ "aria-label": "search" }}
-							onChange={handleSubmit}
+							onChange={(e) => props.onChange(e)}
 							inputRef={inputRef}
-							value={state.search}
+							value={props.search}
 						/>
 					</div>
 					<div className={classes.grow} />
