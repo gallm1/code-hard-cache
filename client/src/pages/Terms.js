@@ -4,18 +4,19 @@ import TermCard from "../components/TermCard";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TERM, UPDATE_SEARCH, UPDATE_TERMS } from "../utils/actions";
 
-function Terms() {
-	const [term, setTerm] = useState({});
-	const [terms, setTerms] = useState({});
+function Terms({ query }) {
+	const [terms, setTerms] = useState([]);
 	const [state, dispath] = useStoreContext();
 
 	useEffect(() => {
-		// console.log(state.search);
-    API.getTerm(state.search)
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
-  
-	}, [state.search]);
+		console.log(query);
+		API.getTerms(query)
+			.then((res) => {
+				setTerms(res.data);
+				console.log(res);
+			})
+			.catch((err) => console.log(err));
+	}, [query]);
 
 	useEffect(() => {
 		loadTerms();
@@ -25,14 +26,17 @@ function Terms() {
 		API.getTerms()
 			.then((terms) => {
 				setTerms(terms);
-				setTerm(terms[0]);
 			})
 			.catch((err) => console.log(err));
 	}
 
 	return (
 		<div>
-			<TermCard />
+			{terms &&
+				Array.isArray(terms) &&
+				terms.map((term) => {
+					return <TermCard term={term} />;
+				})}
 		</div>
 	);
 }

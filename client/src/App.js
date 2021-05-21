@@ -8,7 +8,8 @@ import Terms from "./pages/Terms";
 import Home from "./pages/Home";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { deepPurple, green } from "@material-ui/core/colors";
-import { StoreProvider } from "./utils/GlobalState";
+import { StoreProvider, useStoreContext } from "./utils/GlobalState";
+import { useState } from "react";
 
 const theme = createMuiTheme({
 	palette: {
@@ -25,24 +26,38 @@ const theme = createMuiTheme({
 });
 
 function App() {
+	const [search, setSearch] = useState("");
+	// const [state, dispatch] = useStoreContext();
 
+	const handleChange = (e) => {
+		e.persist();
+		e.preventDefault();
+		setSearch((cur) => e.target.value);
 
-		return (
-			<ThemeProvider theme={theme}>
-				<Router>
-					<StoreProvider>
-					<Nav />
+		// dispatch({
+		// 	type: UPDATE_SEARCH,
+		// 	search: e.target.value,
+		// });
+		// state.search = "";
+	};
+
+	return (
+		<ThemeProvider theme={theme}>
+			<Router>
+				<StoreProvider>
+					<Nav onChange={handleChange} search={search} />
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/">
+							<Home query={search} />
+						</Route>
 						<Route exact path="/sign-in" />
 						<Route exact path="/create-term" component={CreateTerm} />
-						<Route exact path="/" component={Terms} />
 					</Switch>
 					<Footer />
-					</StoreProvider>
-				</Router>
-			</ThemeProvider>
-		);
+				</StoreProvider>
+			</Router>
+		</ThemeProvider>
+	);
 }
 
 export default App;

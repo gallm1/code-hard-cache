@@ -34,9 +34,10 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export default function OutlinedCard({ term, rep, meaning, date, tips, user }) {
+export default function OutlinedCard(props) {
 	const classes = useStyles();
 	const bull = <span className={classes.bullet}>•</span>;
+	const { term, represents, meaning, date, tips, user } = props.term;
 
 	return (
 		<div className={classes.paper}>
@@ -67,7 +68,7 @@ export default function OutlinedCard({ term, rep, meaning, date, tips, user }) {
 						component="h2"
 						color="secondary"
 					>
-						Represents: {rep}
+						Represents: {represents}
 					</Typography>
 					<Typography className={classes.pos} color="primary">
 						{"represents from db"}
