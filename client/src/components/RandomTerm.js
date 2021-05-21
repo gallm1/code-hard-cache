@@ -8,7 +8,7 @@ import "../index.css";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		width: "65%",
-		marginTop: theme.spacing(10),
+		marginTop: theme.spacing(4),
 	},
 	paper: {
 		// marginTop: theme.spacing(),
@@ -59,7 +59,7 @@ export default function OutlinedCard() {
 						component="h2"
 						color="primary"
 					>
-						{"ex: CSS; (term from db)"}
+						CHC
 					</Typography>
 					<Typography
 						className="card-title"
@@ -70,7 +70,7 @@ export default function OutlinedCard() {
 						Represents:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{"represents from db"}
+						CODE|HARD|CACHE
 					</Typography>
 					<Typography
 						className="card-title"
@@ -81,7 +81,7 @@ export default function OutlinedCard() {
 						Meaning:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{"meaning from db"}
+						The best application to learn coding acronyms and what they represent
 					</Typography>
 					<Typography
 						className="card-title"
@@ -92,13 +92,13 @@ export default function OutlinedCard() {
 						Tips/Links:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{"tips from db"}
+						https://code-hard-cache.herokuapp.com/
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
-						User : (user from db)
+						User : SF MG
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
-						Date : (date from db)
+						Date : May 21 2021
 					</Typography>
 				</CardContent>
 				{/* <CardActions>

@@ -7,7 +7,7 @@ body {
 }
 
 .footer {
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -15,6 +15,7 @@ body {
   color: #00e676;
   text-align: center;
   border-top: 3px solid #00e676;
+  margin-top: 14px;
 }
 
 .card-title {
