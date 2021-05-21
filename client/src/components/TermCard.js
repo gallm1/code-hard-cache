@@ -71,7 +71,7 @@ export default function OutlinedCard(props) {
 						Represents:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						{represents}	
+						{represents}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -79,7 +79,7 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="secondary"
 					>
-						Meaning: 
+						Meaning:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
 						{meaning}
@@ -90,10 +90,12 @@ export default function OutlinedCard(props) {
 						component="h2"
 						color="secondary"
 					>
-						Tips/Links: 
+						Tips/Links:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						<a href={tips} target="_blank">{tips}</a>
+						<a href={tips} target="_blank">
+							{tips}
+						</a>
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
 						User : {user}

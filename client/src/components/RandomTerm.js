@@ -4,6 +4,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import "../index.css";
+import { useEffect, useState } from "react";
+import API from "../utils/API";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -37,6 +39,17 @@ const useStyles = makeStyles((theme) => ({
 export default function OutlinedCard() {
 	const classes = useStyles();
 	const bull = <span className={classes.bullet}>•</span>;
+	const [term, setTerm] = useState();
+
+	useEffect(() => {
+		API.getTerms()
+			.then((res) => {
+				const randomNum = Math.floor(Math.random() * res.data.length) + 1;
+				const randomTerm = res.data[randomNum];
+				setTerm(randomTerm);
+			})
+			.catch((err) => console.log(err));
+	}, []);
 
 	return (
 		<div className={classes.paper}>
@@ -59,7 +72,7 @@ export default function OutlinedCard() {
 						component="h2"
 						color="primary"
 					>
-						CHC
+						{term && term.term}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -70,7 +83,7 @@ export default function OutlinedCard() {
 						Represents:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						CODE|HARD|CACHE
+						{term && term.represents}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -81,7 +94,7 @@ export default function OutlinedCard() {
 						Meaning:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						The best application to learn coding acronyms and what they represent
+						{term && term.meaning}
 					</Typography>
 					<Typography
 						className="card-title"
@@ -92,13 +105,15 @@ export default function OutlinedCard() {
 						Tips/Links:
 					</Typography>
 					<Typography className={classes.pos} color="primary">
-						<a href="https://code-hard-cache.herokuapp.com/" target="_blank">https://code-hard-cache.herokuapp.com</a>
+						<a href={term && term.tips} target="_blank">
+							{term && term.tips}
+						</a>
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
-						User : SF MG
+						User : {term && term.user}
 					</Typography>
 					<Typography variant="body2" component="p" color="primary">
-						Date : May 21 2021
+						Date : {term && term.date}
 					</Typography>
 				</CardContent>
 				{/* <CardActions>

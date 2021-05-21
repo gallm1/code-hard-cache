@@ -12,8 +12,12 @@ function Terms({ query }) {
 		console.log(query);
 		API.getTerms(query)
 			.then((res) => {
-				setTerms(res.data);
-				console.log(res);
+				const myTerms = res.data.filter((item) =>
+					item.term.toUpperCase().includes(query.toUpperCase())
+				);
+				console.log("terms is here", myTerms);
+				console.log("this is res data", res.data);
+				setTerms(myTerms);
 			})
 			.catch((err) => console.log(err));
 	}, [query]);
